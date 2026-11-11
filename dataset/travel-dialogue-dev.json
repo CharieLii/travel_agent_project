@@ -1,0 +1,1015 @@
+{
+  "language": "zh",
+  "synthetic": true,
+  "reference_datetime": "2026-11-10T12:00:00+08:00",
+  "timezone": "Asia/Hong_Kong",
+  "notes": [
+    "只把 messages 交给待评系统；expected 是最后一个用户回合之后的预期提取状态，不能放进提示词。assistant 消息是预设对话上下文。",
+    "未提供、未确定或撤销而没有新值的字段为 null。must_visit_place_ids 为 [] 表示明确没有必去地点；不把顺路或可选景点当成必去。比较该字段时按集合比较。",
+    "arrival 和 departure 是抵达或离开目的地的日期和当地时刻；仅知道部分时另一部分为 null。未写年份的明确日期和相对日期按 reference_datetime 解释。",
+    "destination 只收录用户明确给出的目的地，不凭已知酒店或景点补填；库外城市照实提取。accommodation 可以是明确的区域或库外酒店，无法解析成已知住宿 ID 时 place_id 为 null。",
+    "party.has_senior 与 party.has_child 独立判断；只在有明确证据时填 true 或 false。舒适度仅使用 轻松、适宜、充实；未表达则为 null。",
+    "这批案例主要测试提取和多轮状态更新。冲突日期保留原始提取值供下游澄清，不要求生成可行路线。",
+    "preferred_attraction_types 是用户明确表达的景点类型偏好，按标签集合比较；未表达为 null。类型偏好不等于必游，不能仅根据同行人员或某个必游景点推断。多轮修改以最新明确偏好为准。",
+    "含故意设置的信息错误或硬约束冲突的案例；expected 保留可用结构化提取字段，expected_behavior 为人工评审参考，不提供给模型。库外必游没有可用地点 ID，不将其视为用户明确没有其他必游景点。"
+  ],
+  "split": "dev",
+  "cases": [
+    {
+      "id": "DEV-01",
+      "tags": [
+        "完整输入"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月20号上午10点到香港，22号晚上7点离开，住香港喜来登。带一个老人和一个小孩，香港艺术馆和星光大道一定要去，行程轻松些。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-20",
+          "time": "10:00"
+        },
+        "departure": {
+          "date": "2026-11-22",
+          "time": "19:00"
+        },
+        "must_visit_place_ids": [
+          "hk_museum_of_art",
+          "avenue_of_stars"
+        ],
+        "accommodation": {
+          "name": "香港喜来登酒店",
+          "place_id": "sheraton_hong_kong_hotel_and_towers"
+        },
+        "party": {
+          "has_senior": true,
+          "has_child": true
+        },
+        "comfort_preference": "轻松",
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-02",
+      "tags": [
+        "仅目的地",
+        "类型偏好"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "想去香港玩，先帮我看看能怎么安排，我比较喜欢逛美术馆和看展，先帮我看看能怎么安排。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": [
+          "博物馆与艺术"
+        ]
+      }
+    },
+    {
+      "id": "DEV-03",
+      "tags": [
+        "仅必游景点"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "M+ 和西九艺术公园一定要放进去，其他我晚点再定。"
+        }
+      ],
+      "expected": {
+        "destination": null,
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "m_plus",
+          "west_kowloon_art_park"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-04",
+      "tags": [
+        "仅住宿"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "我订的是尖沙咀弥敦道20号那家香港喜来登酒店，别搞成别的喜来登。"
+        }
+      ],
+      "expected": {
+        "destination": null,
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": {
+          "name": "香港喜来登酒店",
+          "place_id": "sheraton_hong_kong_hotel_and_towers"
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-05",
+      "tags": [
+        "仅同行人员"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "这次两个人出门，我和我爸，他70岁，没有带小孩。"
+        }
+      ],
+      "expected": {
+        "destination": null,
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": true,
+          "has_child": false
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-06",
+      "tags": [
+        "仅舒适度"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "不用排满，我想有空坐下来歇会儿，按轻松的节奏来。"
+        }
+      ],
+      "expected": {
+        "destination": null,
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "轻松",
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-07",
+      "tags": [
+        "日期无时刻"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月23日到香港，11月25日走，几点到还没定。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-23",
+          "time": null
+        },
+        "departure": {
+          "date": "2026-11-25",
+          "time": null
+        },
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-08",
+      "tags": [
+        "日期时刻混合",
+        "多类型偏好"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "去香港，12月5号下午两点到，12月7号离开，返程时间还没买。我喜欢看老建筑，也想逛逛有特色的街区。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-05",
+          "time": "14:00"
+        },
+        "departure": {
+          "date": "2026-12-07",
+          "time": null
+        },
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": [
+          "历史古迹",
+          "城市漫游与建筑"
+        ]
+      }
+    },
+    {
+      "id": "DEV-09",
+      "tags": [
+        "随意推荐非必游",
+        "类型与必游并存"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "香港这趟，科学馆如果顺路可以考虑，不去也行。太空馆得去，节奏适中就好。我还想安排点适合带孩子一起玩的活动。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "hk_space_museum"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "适宜",
+        "preferred_attraction_types": [
+          "亲子与游乐"
+        ]
+      }
+    },
+    {
+      "id": "DEV-10",
+      "tags": [
+        "住宿未决定"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "去香港，酒店还没订，可能住旺角也可能尖沙咀。两个人都是成年人，没有老人小孩。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": false,
+          "has_child": false
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-11",
+      "tags": [
+        "已知区域但酒店未知"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "住宿已经定在尖沙咀，具体哪家我晚点发你。香港历史博物馆一定要去。"
+        }
+      ],
+      "expected": {
+        "destination": null,
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "hk_museum_of_history"
+        ],
+        "accommodation": {
+          "name": "尖沙咀",
+          "place_id": null,
+          "is_specific": false
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-12",
+      "tags": [
+        "多轮补充",
+        "多轮补充类型"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "想去香港玩，行程别太赶。"
+        },
+        {
+          "role": "assistant",
+          "content": "还有没有你特别想去的地方，或者已经确定的住宿？"
+        },
+        {
+          "role": "user",
+          "content": "南莲园池一定要去，酒店是香港喜来登。其他活动我更想看海景、找个公园坐坐。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "nan_lian_garden"
+        ],
+        "accommodation": {
+          "name": "香港喜来登酒店",
+          "place_id": "sheraton_hong_kong_hotel_and_towers"
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "轻松",
+        "preferred_attraction_types": [
+          "自然风光",
+          "休闲与度假"
+        ]
+      }
+    },
+    {
+      "id": "DEV-13",
+      "tags": [
+        "多轮时间纠正"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月3号上午9点到香港，5号下午6点走，想玩充实点。"
+        },
+        {
+          "role": "assistant",
+          "content": "我记下了。抵达和离开时间都确定了吗？"
+        },
+        {
+          "role": "user",
+          "content": "抵达改成3号下午1点，离开不变。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-03",
+          "time": "13:00"
+        },
+        "departure": {
+          "date": "2026-12-05",
+          "time": "18:00"
+        },
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "充实",
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-14",
+      "tags": [
+        "多轮替换景点"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "去香港，海洋公园和金紫荆广场是必去。"
+        },
+        {
+          "role": "assistant",
+          "content": "已记下这两个必去地点。"
+        },
+        {
+          "role": "user",
+          "content": "海洋公园换成香港迪士尼，金紫荆广场保留。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "golden_bauhinia_square",
+          "hong_kong_disneyland"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-15",
+      "tags": [
+        "明确无必游",
+        "多类型偏好"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "香港三天自由行，没有非去不可的景点。别太赶也别太松，适中就好。晚上想逛夜市吃小吃，也想看看本地商圈。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "适宜",
+        "preferred_attraction_types": [
+          "美食与市集",
+          "购物与夜生活"
+        ]
+      }
+    },
+    {
+      "id": "DEV-16",
+      "tags": [
+        "同行未知部分",
+        "类型偏好"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "想去香港，带两个小学的小孩，其他同行人还没确定。九龙公园想去但不强求。可以多推荐动物园或主题乐园这种适合亲子游的地方。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": true
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": [
+          "亲子与游乐"
+        ]
+      }
+    },
+    {
+      "id": "DEV-17",
+      "tags": [
+        "不支持目的地"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "帮我排个澳门行程，11月28号早上9点到，29号晚上8点走，想尽量玩满。"
+        }
+      ],
+      "expected": {
+        "destination": "澳门",
+        "arrival": {
+          "date": "2026-11-28",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-11-29",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": null,
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "充实",
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-18",
+      "tags": [
+        "库外住宿"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "去香港，住香港半岛酒店。前九广铁路钟楼和庙街夜市必须去。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [
+          "tsim_sha_tsui_clock_tower",
+          "temple_street_night_market"
+        ],
+        "accommodation": {
+          "name": "香港半岛酒店",
+          "place_id": null
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-19",
+      "tags": [
+        "多轮清空必游"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "香港的大馆和香港公园先列为必去。"
+        },
+        {
+          "role": "assistant",
+          "content": "这两处都设为必去，节奏有偏好吗？"
+        },
+        {
+          "role": "user",
+          "content": "取消必去吧，都随你推荐。安排紧凑一点，我想多玩几个地方。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": null,
+        "departure": null,
+        "must_visit_place_ids": [],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "充实",
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-20",
+      "tags": [
+        "矛盾日期"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "香港的行程先按12月12号上午10点抵达、12月11号下午5点离开录进去，女人街是必去的。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-12",
+          "time": "10:00"
+        },
+        "departure": {
+          "date": "2026-12-11",
+          "time": "17:00"
+        },
+        "must_visit_place_ids": [
+          "ladies_market"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-21",
+      "tags": [
+        "错误地点归属",
+        "库外必游"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月20日上午9点到香港，11月22日晚上8点离开。香港艺术馆和澳门大三巴牌坊都一定要去。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-20",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-11-22",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hk_museum_of_art"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "指出澳门大三巴牌坊不在香港及当前香港数据范围内，不应编造成香港景点；说明不能在当前范围安排该景点，并询问是否调整要求。香港艺术馆仍是必游。"
+    },
+    {
+      "id": "DEV-22",
+      "tags": [
+        "闭馆日冲突",
+        "指定访问日期"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月26日上午9点到香港，11月27日晚上8点离开。香港艺术馆必须安排在11月26日参观，其他时间不行。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-26",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-11-27",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hk_museum_of_art"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "数据集中香港艺术馆周四闭馆，11月26日是周四。应指出指定日期冲突，询问是否允许改到27日，不能假装当天开放或擅自改变必选日期。"
+    },
+    {
+      "id": "DEV-23",
+      "tags": [
+        "闭馆日冲突",
+        "指定访问日期"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月23日早上9点到香港，24日晚上8点离开，M+必须安排在23日参观，不能换日子。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-23",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-11-24",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "m_plus"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "依据数据集，M+周一闭馆，11月23日为周一；指出冲突并询问是否调整，不擅自改期。"
+    },
+    {
+      "id": "DEV-24",
+      "tags": [
+        "闭馆前访问",
+        "指定访问时间"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月3日上午9点到香港，4日晚上8点离开。4日上午9点必须进入香港太空馆参观。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-03",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-04",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hk_space_museum"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "依据数据集，12月4日周五太空馆13:00才开放；指出9点入馆的冲突并询问是否调整。"
+    },
+    {
+      "id": "DEV-25",
+      "tags": [
+        "错误地点归属",
+        "库外必游"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月11日早上9点到香港，12月12日晚上8点走。一定要去香港公园和深圳的世界之窗，我以为世界之窗就在香港。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-11",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-12",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hong_kong_park"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "指出世界之窗位于深圳，不属于当前香港景点库，询问是否调整；保留香港公园的必游要求。"
+    },
+    {
+      "id": "DEV-26",
+      "tags": [
+        "多轮修正闭馆冲突"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月3日上午9点到香港，4日晚上8点走。香港科学馆必须12月3日去。"
+        },
+        {
+          "role": "assistant",
+          "content": "香港科学馆按资料周四闭馆，能否换到第二天？"
+        },
+        {
+          "role": "user",
+          "content": "那就改成12月4日去科学馆，住香港喜来登。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-03",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-04",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hk_science_museum"
+        ],
+        "accommodation": {
+          "name": "香港喜来登酒店",
+          "place_id": "sheraton_hong_kong_hotel_and_towers"
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "遵循用户最新要求，按12月4日安排科学馆，并保留住宿要求。"
+    },
+    {
+      "id": "DEV-27",
+      "tags": [
+        "开放时间未知",
+        "必游"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月11日早上9点到香港，12日晚上8点走。香港迪士尼一定要去，想轻松一点。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-11",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-12",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hong_kong_disneyland"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "轻松",
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "迪士尼在现有数据集中开放时间未核实；不要捏造确定的开放时间，提示需要核实。"
+    },
+    {
+      "id": "DEV-28",
+      "tags": [
+        "普通案例",
+        "多类型偏好"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "11月23日上午9点到香港，24日晚上8点走，住香港喜来登。九龙公园一定要去，也想多看看展览和自然风景，节奏轻松。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-11-23",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-11-24",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "kowloon_park"
+        ],
+        "accommodation": {
+          "name": "香港喜来登酒店",
+          "place_id": "sheraton_hong_kong_hotel_and_towers"
+        },
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": "轻松",
+        "preferred_attraction_types": [
+          "博物馆与艺术",
+          "自然风光"
+        ]
+      }
+    },
+    {
+      "id": "DEV-29",
+      "tags": [
+        "多轮替换必游"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月7日早上9点到香港，8日晚上8点离开。香港艺术馆和九龙公园都必须去。"
+        },
+        {
+          "role": "assistant",
+          "content": "已记下这两个必游景点。"
+        },
+        {
+          "role": "user",
+          "content": "把九龙公园换成星光大道，艺术馆照旧，带一位老人。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-07",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-08",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hk_museum_of_art",
+          "avenue_of_stars"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": true,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      }
+    },
+    {
+      "id": "DEV-30",
+      "tags": [
+        "抵达前访问冲突"
+      ],
+      "messages": [
+        {
+          "role": "user",
+          "content": "12月11日早上9点到香港，12日晚上8点离开。必须在12月11日早上8点参观香港公园，我不想改这个时间。"
+        }
+      ],
+      "expected": {
+        "destination": "香港",
+        "arrival": {
+          "date": "2026-12-11",
+          "time": "09:00"
+        },
+        "departure": {
+          "date": "2026-12-12",
+          "time": "20:00"
+        },
+        "must_visit_place_ids": [
+          "hong_kong_park"
+        ],
+        "accommodation": null,
+        "party": {
+          "has_senior": null,
+          "has_child": null
+        },
+        "comfort_preference": null,
+        "preferred_attraction_types": null
+      },
+      "expected_behavior": "指定参观时间早于抵达时间，应指出冲突并询问是否调整，不能擅自更改。"
+    }
+  ]
+}

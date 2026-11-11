@@ -1,0 +1,22 @@
+{
+  "city": "Hong Kong",
+  "timezone": "Asia/Hong_Kong",
+  "checked_on": "2026-11-09",
+  "places": [
+    {
+      "id": "sheraton_hong_kong_hotel_and_towers",
+      "name_zh": "香港喜来登酒店",
+      "name_en": "Sheraton Hong Kong Hotel & Towers",
+      "address": "香港九龙尖沙咀弥敦道20号",
+      "coordinates": {
+        "latitude": 22.29524,
+        "longitude": 114.17297
+      },
+      "sources": {
+        "venue": "https://www.marriott.com/zh-hk/hotels/hkgsi-sheraton-hong-kong-hotel-and-towers/overview/",
+        "coordinates": "https://mapcarta.com/32271172"
+      },
+      "coordinate_note": "OpenStreetMap 酒店参考点，未核实为入口。"
+    }
+  ]
+}

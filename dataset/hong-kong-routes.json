@@ -1,0 +1,5822 @@
+{
+  "city": "Hong Kong",
+  "timezone": "Asia/Hong_Kong",
+  "reference_departure": "2026-11-11T10:00:00+08:00",
+  "provenance": {
+    "router": "OpenTripPlanner 2.8.0",
+    "downloaded_on": "2026-11-10",
+    "street_network": {
+      "attribution": "© OpenStreetMap contributors",
+      "extract_provider": "Geo2Day",
+      "url": "https://geo2day.com/asia/china/hong_kong.pbf",
+      "sha256": "af7c16903d1d1524c356f65c2acbe158d5538242c984f9e7a5562f779b8460c4"
+    },
+    "public_transport": {
+      "attribution": "Wheels Hong Kong Community GTFS and its upstream contributors, including the HKSAR Government, relevant data providers and DATA.GOV.HK",
+      "url": "https://feed.justusewheels.com/hk.gtfs.zip",
+      "upstream_attribution_url": "https://github.com/wheelstransit/hongkong-community-gtfs#data-source-attribution",
+      "feed_version": "20261110",
+      "sha256": "2764749a6d7715b8f8892d7dcc74502892bca29290e52f8a514c74d7717e3a4b",
+      "preprocessing": "Removed 262 frequency rows with headway_secs >= 43200 due to OTP routing error; those services are excluded.",
+      "filtered_sha256": "353358ebcdc68b72b302cb105ad30b526cc3fe5dadda6a65632269f6509c6f1d",
+      "missing_routes_retry": "64 missing pairs supplemented using earliest-arrival transit candidates in OTP LIST_ALL debug output, excluding candidates marked outside-search-window. Candidates were originally filtered against walking or other criteria."
+    },
+    "license": "Open Database License 1.0",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "accommodation_reference": {
+      "id": "sheraton_hong_kong_hotel_and_towers",
+      "latitude": 22.29524,
+      "longitude": 114.17297,
+      "coordinate_source": "https://mapcarta.com/32271172",
+      "osm_object": "https://www.openstreetmap.org/way/124697425",
+      "description": "OSM hotel reference point, entrance not verified"
+    }
+  },
+  "routes": [
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 147,
+      "transit_total_seconds": 907,
+      "transit_walk_seconds": 350.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 1063,
+      "transit_total_seconds": 1323,
+      "transit_walk_seconds": 562.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1129,
+      "transit_total_seconds": 1389,
+      "transit_walk_seconds": 628.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 924,
+      "transit_total_seconds": 1252,
+      "transit_walk_seconds": 982.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 237,
+      "transit_total_seconds": 1140,
+      "transit_walk_seconds": 671.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 238,
+      "transit_total_seconds": 741,
+      "transit_walk_seconds": 272.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1884,
+      "transit_total_seconds": 1572,
+      "transit_walk_seconds": 449.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2328,
+      "transit_total_seconds": 1999,
+      "transit_walk_seconds": 876.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2166,
+      "transit_total_seconds": 1837,
+      "transit_walk_seconds": 714.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1806,
+      "transit_walk_seconds": 1393.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1512,
+      "transit_walk_seconds": 1209.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1858,
+      "transit_walk_seconds": 1445.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5975,
+      "transit_total_seconds": 2011,
+      "transit_walk_seconds": 995.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1846,
+      "transit_walk_seconds": 949.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1456,
+      "transit_total_seconds": 1213,
+      "transit_walk_seconds": 867.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2454,
+      "transit_total_seconds": 1233,
+      "transit_walk_seconds": 761.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3159,
+      "transit_walk_seconds": 2746.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4333,
+      "transit_walk_seconds": 1079.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1891,
+      "transit_walk_seconds": 881.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 147,
+      "transit_total_seconds": 850,
+      "transit_walk_seconds": 381.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 992,
+      "transit_total_seconds": 1268,
+      "transit_walk_seconds": 507.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1058,
+      "transit_total_seconds": 1334,
+      "transit_walk_seconds": 573.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 869,
+      "transit_total_seconds": 1205,
+      "transit_walk_seconds": 935.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 318,
+      "transit_total_seconds": 1023,
+      "transit_walk_seconds": 554.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 270,
+      "transit_total_seconds": 624,
+      "transit_walk_seconds": 155.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1837,
+      "transit_total_seconds": 1559,
+      "transit_walk_seconds": 436.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2281,
+      "transit_total_seconds": 1986,
+      "transit_walk_seconds": 863.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2119,
+      "transit_total_seconds": 1824,
+      "transit_walk_seconds": 701.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1752,
+      "transit_walk_seconds": 1339.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1458,
+      "transit_walk_seconds": 1155.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1804,
+      "transit_walk_seconds": 1391.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5974,
+      "transit_total_seconds": 1956,
+      "transit_walk_seconds": 940.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1859,
+      "transit_walk_seconds": 1556.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1402,
+      "transit_total_seconds": 1159,
+      "transit_walk_seconds": 813.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2399,
+      "transit_total_seconds": 1179,
+      "transit_walk_seconds": 707.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3105,
+      "transit_walk_seconds": 2692.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4278,
+      "transit_walk_seconds": 1024.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1837,
+      "transit_walk_seconds": 827.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 1068,
+      "transit_total_seconds": 855,
+      "transit_walk_seconds": 367.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 992,
+      "transit_total_seconds": 841,
+      "transit_walk_seconds": 353.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 67,
+      "transit_total_seconds": 835,
+      "transit_walk_seconds": 486.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 924,
+      "transit_total_seconds": 1370,
+      "transit_walk_seconds": 701.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 1018,
+      "transit_total_seconds": 913,
+      "transit_walk_seconds": 425.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 1225,
+      "transit_total_seconds": 1080,
+      "transit_walk_seconds": 592.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1989,
+      "transit_total_seconds": 1816,
+      "transit_walk_seconds": 539.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2433,
+      "transit_total_seconds": 2243,
+      "transit_walk_seconds": 966.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2270,
+      "transit_total_seconds": 2081,
+      "transit_walk_seconds": 804.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2091,
+      "transit_walk_seconds": 1678.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1797,
+      "transit_walk_seconds": 1494.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2143,
+      "transit_walk_seconds": 1730.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5187,
+      "transit_total_seconds": 2138,
+      "transit_walk_seconds": 1349.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1626,
+      "transit_walk_seconds": 1247.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1310,
+      "transit_total_seconds": 1500,
+      "transit_walk_seconds": 1154.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2091,
+      "transit_total_seconds": 1520,
+      "transit_walk_seconds": 1048.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3444,
+      "transit_walk_seconds": 3031.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4631,
+      "transit_walk_seconds": 1377.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2169,
+      "transit_walk_seconds": 1017.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 1134,
+      "transit_total_seconds": 825,
+      "transit_walk_seconds": 337.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 1058,
+      "transit_total_seconds": 811,
+      "transit_walk_seconds": 323.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 67,
+      "transit_total_seconds": 739,
+      "transit_walk_seconds": 390.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 956,
+      "transit_total_seconds": 1340,
+      "transit_walk_seconds": 671.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 1084,
+      "transit_total_seconds": 883,
+      "transit_walk_seconds": 395.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 1291,
+      "transit_total_seconds": 1050,
+      "transit_walk_seconds": 562.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1958,
+      "transit_total_seconds": 1906,
+      "transit_walk_seconds": 515.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2402,
+      "transit_total_seconds": 2333,
+      "transit_walk_seconds": 942.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2239,
+      "transit_total_seconds": 2171,
+      "transit_walk_seconds": 780.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2157,
+      "transit_walk_seconds": 1744.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1863,
+      "transit_walk_seconds": 1560.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2209,
+      "transit_walk_seconds": 1796.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5156,
+      "transit_total_seconds": 2177,
+      "transit_walk_seconds": 1388.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1665,
+      "transit_walk_seconds": 1286.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1279,
+      "transit_total_seconds": 1566,
+      "transit_walk_seconds": 1220.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2060,
+      "transit_total_seconds": 1586,
+      "transit_walk_seconds": 1114.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3510,
+      "transit_walk_seconds": 3097.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4697,
+      "transit_walk_seconds": 1443.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2208,
+      "transit_walk_seconds": 1056.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 922,
+      "transit_total_seconds": 1171,
+      "transit_walk_seconds": 949.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 868,
+      "transit_total_seconds": 1124,
+      "transit_walk_seconds": 902.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 873,
+      "transit_total_seconds": 1443,
+      "transit_walk_seconds": 1238.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 939,
+      "transit_total_seconds": 1509,
+      "transit_walk_seconds": 1304.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 1093,
+      "transit_total_seconds": 1363,
+      "transit_walk_seconds": 1158.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 895,
+      "transit_total_seconds": 1004,
+      "transit_walk_seconds": 782.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1298,
+      "transit_total_seconds": 1508,
+      "transit_walk_seconds": 717.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 1742,
+      "transit_total_seconds": 1732,
+      "transit_walk_seconds": 803.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 1579,
+      "transit_total_seconds": 1650,
+      "transit_walk_seconds": 763.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1877,
+      "transit_walk_seconds": 1464.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1583,
+      "transit_walk_seconds": 1280.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1929,
+      "transit_walk_seconds": 1516.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5423,
+      "transit_total_seconds": 2432,
+      "transit_walk_seconds": 1302.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1984,
+      "transit_walk_seconds": 1681.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 690,
+      "transit_total_seconds": 1194,
+      "transit_walk_seconds": 793.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 1773,
+      "transit_total_seconds": 1195,
+      "transit_walk_seconds": 814.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3230,
+      "transit_walk_seconds": 2817.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4423,
+      "transit_walk_seconds": 1051.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1962,
+      "transit_walk_seconds": 952.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 237,
+      "transit_total_seconds": 1137,
+      "transit_walk_seconds": 668.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 318,
+      "transit_total_seconds": 1102,
+      "transit_walk_seconds": 621.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 1044,
+      "transit_total_seconds": 1439,
+      "transit_walk_seconds": 803.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1110,
+      "transit_total_seconds": 1478,
+      "transit_walk_seconds": 842.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 1094,
+      "transit_total_seconds": 1391,
+      "transit_walk_seconds": 910.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 411,
+      "transit_total_seconds": 911,
+      "transit_walk_seconds": 442.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 2081,
+      "transit_total_seconds": 1643,
+      "transit_walk_seconds": 520.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2525,
+      "transit_total_seconds": 2070,
+      "transit_walk_seconds": 947.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2363,
+      "transit_total_seconds": 1908,
+      "transit_walk_seconds": 785.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1977,
+      "transit_walk_seconds": 1564.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1683,
+      "transit_walk_seconds": 1380.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2029,
+      "transit_walk_seconds": 1616.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5798,
+      "transit_total_seconds": 2181,
+      "transit_walk_seconds": 1165.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2016,
+      "transit_walk_seconds": 1119.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1627,
+      "transit_total_seconds": 1384,
+      "transit_walk_seconds": 1038.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2624,
+      "transit_total_seconds": 1404,
+      "transit_walk_seconds": 932.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3330,
+      "transit_walk_seconds": 2917.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4503,
+      "transit_walk_seconds": 1249.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2062,
+      "transit_walk_seconds": 1052.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 238,
+      "transit_total_seconds": 987,
+      "transit_walk_seconds": 717.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 270,
+      "transit_total_seconds": 932,
+      "transit_walk_seconds": 662.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 1225,
+      "transit_total_seconds": 1493,
+      "transit_walk_seconds": 1223.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1291,
+      "transit_total_seconds": 1559,
+      "transit_walk_seconds": 1289.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 896,
+      "transit_total_seconds": 1085,
+      "transit_walk_seconds": 815.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 411,
+      "transit_total_seconds": 1157,
+      "transit_walk_seconds": 887.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1717,
+      "transit_total_seconds": 1540,
+      "transit_walk_seconds": 592.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2161,
+      "transit_total_seconds": 1967,
+      "transit_walk_seconds": 1019.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 1998,
+      "transit_total_seconds": 1805,
+      "transit_walk_seconds": 857.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1995,
+      "transit_walk_seconds": 1582.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1701,
+      "transit_walk_seconds": 1398.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2047,
+      "transit_walk_seconds": 1634.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 6208,
+      "transit_total_seconds": 2190,
+      "transit_walk_seconds": 1174.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2025,
+      "transit_walk_seconds": 1128.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1416,
+      "transit_total_seconds": 1482,
+      "transit_walk_seconds": 536.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2582,
+      "transit_total_seconds": 1422,
+      "transit_walk_seconds": 950.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3348,
+      "transit_walk_seconds": 2935.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4512,
+      "transit_walk_seconds": 1258.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2080,
+      "transit_walk_seconds": 1070.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 1882,
+      "transit_total_seconds": 1635,
+      "transit_walk_seconds": 1350.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 1831,
+      "transit_total_seconds": 1580,
+      "transit_walk_seconds": 1295.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 1970,
+      "transit_total_seconds": 2316,
+      "transit_walk_seconds": 985.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1958,
+      "transit_total_seconds": 2285,
+      "transit_walk_seconds": 954.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 1299,
+      "transit_total_seconds": 2000,
+      "transit_walk_seconds": 1272.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 2077,
+      "transit_total_seconds": 1805,
+      "transit_walk_seconds": 1520.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 1715,
+      "transit_total_seconds": 1819,
+      "transit_walk_seconds": 880.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 714,
+      "transit_total_seconds": 1305,
+      "transit_walk_seconds": 617.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 463,
+      "transit_total_seconds": 1223,
+      "transit_walk_seconds": 577.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2034,
+      "transit_walk_seconds": 1436.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2251,
+      "transit_walk_seconds": 920.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2343,
+      "transit_walk_seconds": 1405.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 6197,
+      "transit_total_seconds": 2717,
+      "transit_walk_seconds": 1587.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2553,
+      "transit_walk_seconds": 902.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1410,
+      "transit_total_seconds": 1812,
+      "transit_walk_seconds": 1212.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2503,
+      "transit_total_seconds": 2055,
+      "transit_walk_seconds": 1674.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3644,
+      "transit_walk_seconds": 2706.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4069,
+      "transit_walk_seconds": 1209.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3014,
+      "transit_walk_seconds": 1796.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 2326,
+      "transit_total_seconds": 2079,
+      "transit_walk_seconds": 1794.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 2275,
+      "transit_total_seconds": 2024,
+      "transit_walk_seconds": 1739.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 2414,
+      "transit_total_seconds": 2166,
+      "transit_walk_seconds": 835.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 2402,
+      "transit_total_seconds": 2135,
+      "transit_walk_seconds": 804.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 1743,
+      "transit_total_seconds": 1839,
+      "transit_walk_seconds": 822.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 2521,
+      "transit_total_seconds": 2249,
+      "transit_walk_seconds": 1964.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 2159,
+      "transit_total_seconds": 2037,
+      "transit_walk_seconds": 729.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 714,
+      "transit_total_seconds": 1487,
+      "transit_walk_seconds": 845.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 375,
+      "transit_total_seconds": 1148,
+      "transit_walk_seconds": 506.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2303,
+      "transit_walk_seconds": 1600.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2497,
+      "transit_walk_seconds": 1339.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2609,
+      "transit_walk_seconds": 1671.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 6420,
+      "transit_total_seconds": 3161,
+      "transit_walk_seconds": 2031.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2819,
+      "transit_walk_seconds": 1168.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1748,
+      "transit_total_seconds": 1676,
+      "transit_walk_seconds": 547.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2726,
+      "transit_total_seconds": 2165,
+      "transit_walk_seconds": 603.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3910,
+      "transit_walk_seconds": 2972.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4464,
+      "transit_walk_seconds": 1604.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3244,
+      "transit_walk_seconds": 1379.0,
+      "transit_modes": [
+        "BUS",
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 2163,
+      "transit_total_seconds": 1916,
+      "transit_walk_seconds": 1631.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 2112,
+      "transit_total_seconds": 1861,
+      "transit_walk_seconds": 1576.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 2252,
+      "transit_total_seconds": 1996,
+      "transit_walk_seconds": 665.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 2239,
+      "transit_total_seconds": 1965,
+      "transit_walk_seconds": 634.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 1580,
+      "transit_total_seconds": 1750,
+      "transit_walk_seconds": 587.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 2359,
+      "transit_total_seconds": 2086,
+      "transit_walk_seconds": 1801.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 1996,
+      "transit_total_seconds": 1867,
+      "transit_walk_seconds": 559.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 463,
+      "transit_total_seconds": 1317,
+      "transit_walk_seconds": 675.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 375,
+      "transit_total_seconds": 1030,
+      "transit_walk_seconds": 388.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2165,
+      "transit_walk_seconds": 1462.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2359,
+      "transit_walk_seconds": 1201.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2471,
+      "transit_walk_seconds": 1533.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 6430,
+      "transit_total_seconds": 2998,
+      "transit_walk_seconds": 1868.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2681,
+      "transit_walk_seconds": 1030.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1691,
+      "transit_total_seconds": 1506,
+      "transit_walk_seconds": 377.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2735,
+      "transit_total_seconds": 1995,
+      "transit_walk_seconds": 433.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3772,
+      "transit_walk_seconds": 2834.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4301,
+      "transit_walk_seconds": 1441.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3106,
+      "transit_walk_seconds": 1241.0,
+      "transit_modes": [
+        "BUS",
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1911,
+      "transit_walk_seconds": 1392.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1857,
+      "transit_walk_seconds": 1338.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2164,
+      "transit_walk_seconds": 1645.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2230,
+      "transit_walk_seconds": 1711.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1990,
+      "transit_walk_seconds": 1471.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2082,
+      "transit_walk_seconds": 1563.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2100,
+      "transit_walk_seconds": 1581.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2153,
+      "transit_walk_seconds": 1168.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2105,
+      "transit_walk_seconds": 1120.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2234,
+      "transit_walk_seconds": 1249.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": 1111,
+      "transit_total_seconds": 1397,
+      "transit_walk_seconds": 941.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": 609,
+      "transit_total_seconds": 1350,
+      "transit_walk_seconds": 607.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3244,
+      "transit_walk_seconds": 1437.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": 2130,
+      "transit_total_seconds": 2258,
+      "transit_walk_seconds": 1736.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1939,
+      "transit_walk_seconds": 1329.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1959,
+      "transit_walk_seconds": 1223.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": 1924,
+      "transit_total_seconds": 2610,
+      "transit_walk_seconds": 2202.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4325,
+      "transit_walk_seconds": 1288.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": 5690,
+      "transit_total_seconds": 2381,
+      "transit_walk_seconds": 1794.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1649,
+      "transit_walk_seconds": 1217.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1595,
+      "transit_walk_seconds": 1163.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1902,
+      "transit_walk_seconds": 1470.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1968,
+      "transit_walk_seconds": 1536.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1728,
+      "transit_walk_seconds": 1296.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1820,
+      "transit_walk_seconds": 1388.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1838,
+      "transit_walk_seconds": 1406.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2311,
+      "transit_walk_seconds": 1013.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2263,
+      "transit_walk_seconds": 965.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2392,
+      "transit_walk_seconds": 1094.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": 1115,
+      "transit_total_seconds": 1326,
+      "transit_walk_seconds": 918.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": 738,
+      "transit_total_seconds": 892,
+      "transit_walk_seconds": 484.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2982,
+      "transit_walk_seconds": 1262.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": 1612,
+      "transit_total_seconds": 1677,
+      "transit_walk_seconds": 1326.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1677,
+      "transit_walk_seconds": 1154.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1697,
+      "transit_walk_seconds": 1048.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": 2133,
+      "transit_total_seconds": 1871,
+      "transit_walk_seconds": 1463.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4711,
+      "transit_walk_seconds": 1674.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": 5223,
+      "transit_total_seconds": 1674,
+      "transit_walk_seconds": 1087.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1963,
+      "transit_walk_seconds": 1444.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1909,
+      "transit_walk_seconds": 1390.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2216,
+      "transit_walk_seconds": 1697.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2282,
+      "transit_walk_seconds": 1763.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2042,
+      "transit_walk_seconds": 1523.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2134,
+      "transit_walk_seconds": 1615.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2152,
+      "transit_walk_seconds": 1633.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2497,
+      "transit_walk_seconds": 1384.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2449,
+      "transit_walk_seconds": 1336.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2578,
+      "transit_walk_seconds": 1465.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": 615,
+      "transit_total_seconds": 1312,
+      "transit_walk_seconds": 815.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": 734,
+      "transit_total_seconds": 1191,
+      "transit_walk_seconds": 735.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3296,
+      "transit_walk_seconds": 1489.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": 2015,
+      "transit_total_seconds": 2085,
+      "transit_walk_seconds": 1080.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1991,
+      "transit_walk_seconds": 1381.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2011,
+      "transit_walk_seconds": 1275.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": 1512,
+      "transit_total_seconds": 2233,
+      "transit_walk_seconds": 1825.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4699,
+      "transit_walk_seconds": 1662.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": 5211,
+      "transit_total_seconds": 2110,
+      "transit_walk_seconds": 1523.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 5965,
+      "transit_total_seconds": 2026,
+      "transit_walk_seconds": 993.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 5952,
+      "transit_total_seconds": 1971,
+      "transit_walk_seconds": 938.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 5171,
+      "transit_total_seconds": 2160,
+      "transit_walk_seconds": 1347.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 5140,
+      "transit_total_seconds": 2199,
+      "transit_walk_seconds": 1386.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 5410,
+      "transit_total_seconds": 2466,
+      "transit_walk_seconds": 1025.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 5807,
+      "transit_total_seconds": 2196,
+      "transit_walk_seconds": 1163.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 6186,
+      "transit_total_seconds": 2205,
+      "transit_walk_seconds": 1172.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 6195,
+      "transit_total_seconds": 2761,
+      "transit_walk_seconds": 1586.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 6417,
+      "transit_total_seconds": 3236,
+      "transit_walk_seconds": 1012.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 6427,
+      "transit_total_seconds": 3154,
+      "transit_walk_seconds": 972.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3238,
+      "transit_walk_seconds": 1431.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2768,
+      "transit_walk_seconds": 1370.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3195,
+      "transit_walk_seconds": 1797.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2332,
+      "transit_walk_seconds": 1000.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 4804,
+      "transit_total_seconds": 2014,
+      "transit_walk_seconds": 1137.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 3961,
+      "transit_total_seconds": 1653,
+      "transit_walk_seconds": 842.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4414,
+      "transit_walk_seconds": 2323.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5019,
+      "transit_walk_seconds": 1070.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "TWL",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2875,
+      "transit_walk_seconds": 770.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL",
+        "EAL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1965,
+      "transit_walk_seconds": 955.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1910,
+      "transit_walk_seconds": 900.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1751,
+      "transit_walk_seconds": 1252.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1790,
+      "transit_walk_seconds": 1291.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2129,
+      "transit_walk_seconds": 1697.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2135,
+      "transit_walk_seconds": 1125.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2144,
+      "transit_walk_seconds": 1134.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2700,
+      "transit_walk_seconds": 1548.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2983,
+      "transit_walk_seconds": 695.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2981,
+      "transit_walk_seconds": 1829.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": 2132,
+      "transit_total_seconds": 2328,
+      "transit_walk_seconds": 1110.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": 1611,
+      "transit_total_seconds": 2001,
+      "transit_walk_seconds": 531.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": 2016,
+      "transit_total_seconds": 2366,
+      "transit_walk_seconds": 896.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2581,
+      "transit_walk_seconds": 990.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2078,
+      "transit_walk_seconds": 1555.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1915,
+      "transit_walk_seconds": 1227.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": 3411,
+      "transit_total_seconds": 3066,
+      "transit_walk_seconds": 2447.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5078,
+      "transit_walk_seconds": 2041.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": 5105,
+      "transit_total_seconds": 1715,
+      "transit_walk_seconds": 762.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 1456,
+      "transit_total_seconds": 1073,
+      "transit_walk_seconds": 868.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 1402,
+      "transit_total_seconds": 1019,
+      "transit_walk_seconds": 814.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 1291,
+      "transit_total_seconds": 1324,
+      "transit_walk_seconds": 1119.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 1279,
+      "transit_total_seconds": 1390,
+      "transit_walk_seconds": 1185.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 690,
+      "transit_total_seconds": 920,
+      "transit_walk_seconds": 657.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 1627,
+      "transit_total_seconds": 1244,
+      "transit_walk_seconds": 1039.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 1415,
+      "transit_total_seconds": 1157,
+      "transit_walk_seconds": 343.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1409,
+      "transit_total_seconds": 1340,
+      "transit_walk_seconds": 940.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 1748,
+      "transit_total_seconds": 1843,
+      "transit_walk_seconds": 914.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 1691,
+      "transit_total_seconds": 1745,
+      "transit_walk_seconds": 338.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1821,
+      "transit_walk_seconds": 1329.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1527,
+      "transit_walk_seconds": 1145.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1873,
+      "transit_walk_seconds": 1381.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 4807,
+      "transit_total_seconds": 2148,
+      "transit_walk_seconds": 1133.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1928,
+      "transit_walk_seconds": 1546.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 1157,
+      "transit_total_seconds": 1079,
+      "transit_walk_seconds": 698.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3174,
+      "transit_walk_seconds": 2682.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4307,
+      "transit_walk_seconds": 935.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1906,
+      "transit_walk_seconds": 817.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 2454,
+      "transit_total_seconds": 1275,
+      "transit_walk_seconds": 815.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 2399,
+      "transit_total_seconds": 1221,
+      "transit_walk_seconds": 761.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 2091,
+      "transit_total_seconds": 1526,
+      "transit_walk_seconds": 1066.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 2060,
+      "transit_total_seconds": 1592,
+      "transit_walk_seconds": 1132.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 1763,
+      "transit_total_seconds": 1251,
+      "transit_walk_seconds": 870.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 2624,
+      "transit_total_seconds": 1446,
+      "transit_walk_seconds": 986.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 2582,
+      "transit_total_seconds": 1464,
+      "transit_walk_seconds": 1004.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 2505,
+      "transit_total_seconds": 2111,
+      "transit_walk_seconds": 1730.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2727,
+      "transit_total_seconds": 2554,
+      "transit_walk_seconds": 2173.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2737,
+      "transit_total_seconds": 2392,
+      "transit_walk_seconds": 2011.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2023,
+      "transit_walk_seconds": 1276.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1729,
+      "transit_walk_seconds": 1092.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2075,
+      "transit_walk_seconds": 1328.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 3952,
+      "transit_total_seconds": 1742,
+      "transit_walk_seconds": 791.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1784,
+      "transit_walk_seconds": 1216.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1157,
+      "transit_total_seconds": 1196,
+      "transit_walk_seconds": 418.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3376,
+      "transit_walk_seconds": 2629.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3946,
+      "transit_walk_seconds": 829.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2108,
+      "transit_walk_seconds": 764.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3264,
+      "transit_walk_seconds": 2745.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3210,
+      "transit_walk_seconds": 2691.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3517,
+      "transit_walk_seconds": 2998.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3583,
+      "transit_walk_seconds": 3064.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3343,
+      "transit_walk_seconds": 2824.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3435,
+      "transit_walk_seconds": 2916.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3453,
+      "transit_walk_seconds": 2934.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3853,
+      "transit_walk_seconds": 3166.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3980,
+      "transit_walk_seconds": 2627.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4085,
+      "transit_walk_seconds": 3398.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": 1928,
+      "transit_total_seconds": 2400,
+      "transit_walk_seconds": 2017.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": 2133,
+      "transit_total_seconds": 2237,
+      "transit_walk_seconds": 1781.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": 1512,
+      "transit_total_seconds": 2184,
+      "transit_walk_seconds": 1801.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4597,
+      "transit_walk_seconds": 2790.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": 3415,
+      "transit_total_seconds": 3098,
+      "transit_walk_seconds": 2576.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3292,
+      "transit_walk_seconds": 2682.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3312,
+      "transit_walk_seconds": 2576.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 6000,
+      "transit_walk_seconds": 2963.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": 4825,
+      "transit_total_seconds": 3229,
+      "transit_walk_seconds": 2000.0,
+      "transit_modes": [
+        "BUS",
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4600,
+      "transit_walk_seconds": 1155.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4545,
+      "transit_walk_seconds": 1100.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4889,
+      "transit_walk_seconds": 1444.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4955,
+      "transit_walk_seconds": 1510.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4724,
+      "transit_walk_seconds": 1891.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4770,
+      "transit_walk_seconds": 1325.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4779,
+      "transit_walk_seconds": 1334.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4129,
+      "transit_walk_seconds": 1296.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4525,
+      "transit_walk_seconds": 1692.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4362,
+      "transit_walk_seconds": 1529.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4339,
+      "transit_walk_seconds": 1328.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4766,
+      "transit_walk_seconds": 1755.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4749,
+      "transit_walk_seconds": 1738.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5241,
+      "transit_walk_seconds": 1161.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5127,
+      "transit_walk_seconds": 2116.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4637,
+      "transit_walk_seconds": 1804.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4242,
+      "transit_walk_seconds": 1004.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 6051,
+      "transit_walk_seconds": 3040.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5526,
+      "transit_walk_seconds": 1070.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1814,
+      "transit_walk_seconds": 674.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1760,
+      "transit_walk_seconds": 620.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2105,
+      "transit_walk_seconds": 939.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2144,
+      "transit_walk_seconds": 978.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": []
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1893,
+      "transit_walk_seconds": 753.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1985,
+      "transit_walk_seconds": 845.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2003,
+      "transit_walk_seconds": 863.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "m_plus",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 2818,
+      "transit_walk_seconds": 1587.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3239,
+      "transit_walk_seconds": 912.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "ISL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3278,
+      "transit_walk_seconds": 1070.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": 5702,
+      "transit_total_seconds": 2088,
+      "transit_walk_seconds": 1072.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "ISL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": 5220,
+      "transit_total_seconds": 1549,
+      "transit_walk_seconds": 961.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": 5212,
+      "transit_total_seconds": 1971,
+      "transit_walk_seconds": 1383.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3147,
+      "transit_walk_seconds": 719.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL",
+        "KTL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": 5111,
+      "transit_total_seconds": 1950,
+      "transit_walk_seconds": 1362.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1842,
+      "transit_walk_seconds": 611.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1862,
+      "transit_walk_seconds": 505.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": 4827,
+      "transit_total_seconds": 3300,
+      "transit_walk_seconds": 2019.0,
+      "transit_modes": [
+        "SUBWAY",
+        "BUS"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 5090,
+      "transit_walk_seconds": 742.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_museum_of_art",
+      "walk_only_seconds": 316,
+      "transit_total_seconds": 835,
+      "transit_walk_seconds": 278.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_art",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 316,
+      "transit_total_seconds": 1049,
+      "transit_walk_seconds": 568.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_space_museum",
+      "walk_only_seconds": 262,
+      "transit_total_seconds": 718,
+      "transit_walk_seconds": 161.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_space_museum",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 262,
+      "transit_total_seconds": 1019,
+      "transit_walk_seconds": 749.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_science_museum",
+      "walk_only_seconds": 818,
+      "transit_total_seconds": 1163,
+      "transit_walk_seconds": 402.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_science_museum",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 818,
+      "transit_total_seconds": 853,
+      "transit_walk_seconds": 365.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_museum_of_history",
+      "walk_only_seconds": 884,
+      "transit_total_seconds": 1229,
+      "transit_walk_seconds": 468.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "hk_museum_of_history",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 884,
+      "transit_total_seconds": 823,
+      "transit_walk_seconds": 335.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "kowloon_park",
+      "walk_only_seconds": 781,
+      "transit_total_seconds": 1150,
+      "transit_walk_seconds": 837.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "kowloon_park",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 780,
+      "transit_total_seconds": 1060,
+      "transit_walk_seconds": 855.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "avenue_of_stars",
+      "walk_only_seconds": 487,
+      "transit_total_seconds": 1005,
+      "transit_walk_seconds": 448.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "avenue_of_stars",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 487,
+      "transit_total_seconds": 1109,
+      "transit_walk_seconds": 628.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "tsim_sha_tsui_clock_tower",
+      "walk_only_seconds": 496,
+      "transit_total_seconds": 798,
+      "transit_walk_seconds": 192.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "tsim_sha_tsui_clock_tower",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 496,
+      "transit_total_seconds": 899,
+      "transit_walk_seconds": 629.0,
+      "transit_modes": [
+        "BUS"
+      ],
+      "uses_mtr_subway": false,
+      "mtr_lines": [],
+      "transit_selection": "debug_candidate_filtered_by_otp"
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "m_plus",
+      "walk_only_seconds": 1910,
+      "transit_total_seconds": 1435,
+      "transit_walk_seconds": 1122.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "m_plus",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 1923,
+      "transit_total_seconds": 1406,
+      "transit_walk_seconds": 1121.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_palace_museum",
+      "walk_only_seconds": 2354,
+      "transit_total_seconds": 1879,
+      "transit_walk_seconds": 1566.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "hk_palace_museum",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 2366,
+      "transit_total_seconds": 1850,
+      "transit_walk_seconds": 1565.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "west_kowloon_art_park",
+      "walk_only_seconds": 2191,
+      "transit_total_seconds": 1716,
+      "transit_walk_seconds": 1403.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "west_kowloon_art_park",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 2204,
+      "transit_total_seconds": 1687,
+      "transit_walk_seconds": 1402.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "tai_kwun",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1674,
+      "transit_walk_seconds": 1261.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "tai_kwun",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1779,
+      "transit_walk_seconds": 1260.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hong_kong_park",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1380,
+      "transit_walk_seconds": 1077.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_park",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1517,
+      "transit_walk_seconds": 1085.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hk_zoological_botanical_gardens",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1726,
+      "transit_walk_seconds": 1313.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "hk_zoological_botanical_gardens",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1831,
+      "transit_walk_seconds": 1312.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "nan_lian_garden",
+      "walk_only_seconds": 5814,
+      "transit_total_seconds": 1782,
+      "transit_walk_seconds": 766.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "nan_lian_garden",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 5796,
+      "transit_total_seconds": 1797,
+      "transit_walk_seconds": 764.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "golden_bauhinia_square",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1617,
+      "transit_walk_seconds": 720.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "EAL"
+      ]
+    },
+    {
+      "origin_id": "golden_bauhinia_square",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1736,
+      "transit_walk_seconds": 726.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "EAL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "temple_street_night_market",
+      "walk_only_seconds": 1314,
+      "transit_total_seconds": 1081,
+      "transit_walk_seconds": 735.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "temple_street_night_market",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 1314,
+      "transit_total_seconds": 941,
+      "transit_walk_seconds": 736.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "ladies_market",
+      "walk_only_seconds": 2311,
+      "transit_total_seconds": 1101,
+      "transit_walk_seconds": 629.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "ladies_market",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": 2311,
+      "transit_total_seconds": 1143,
+      "transit_walk_seconds": 683.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "sky_terrace_428",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3027,
+      "transit_walk_seconds": 2614.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sky_terrace_428",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 3132,
+      "transit_walk_seconds": 2613.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "hong_kong_disneyland",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4104,
+      "transit_walk_seconds": 850.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TML",
+        "TCL",
+        "DRL"
+      ]
+    },
+    {
+      "origin_id": "hong_kong_disneyland",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 4371,
+      "transit_walk_seconds": 926.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "DRL",
+        "TCL",
+        "TML"
+      ]
+    },
+    {
+      "origin_id": "sheraton_hong_kong_hotel_and_towers",
+      "destination_id": "ocean_park_hong_kong",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1759,
+      "transit_walk_seconds": 749.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "TWL",
+        "SIL"
+      ]
+    },
+    {
+      "origin_id": "ocean_park_hong_kong",
+      "destination_id": "sheraton_hong_kong_hotel_and_towers",
+      "walk_only_seconds": null,
+      "transit_total_seconds": 1682,
+      "transit_walk_seconds": 542.0,
+      "transit_modes": [
+        "SUBWAY"
+      ],
+      "uses_mtr_subway": true,
+      "mtr_lines": [
+        "SIL",
+        "TWL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,737 @@
+{
+  "city": "Hong Kong",
+  "timezone": "Asia/Hong_Kong",
+  "checked_on": "2026-11-09",
+  "notes": [
+    "admission.price 为门票价格，0 表示免费，null 表示未核实；admission.currency 为币种代码。",
+    "opening_hours 仅记录周一至周日的常规时段，包含正常周末；不处理公众假期、节日前夕或临时调整。",
+    "每日时段格式为 [开始时间, 结束时间]；[] 表示常规闭馆，null 表示未核实。24:00 表示当日结束。",
+    "坐标是来源提供的地点参考点，未核实为入口。部分参考点由公开地理资料补充，逐条列出来源。",
+    "建议时长按来源原有的适用范围记录，特定展览时长不能当作整馆时长；null 表示未核实。",
+    "types 是项目人工标注的景点类型，可多选；每项必须来自 attraction_type_values。标签用于推荐，不表示景点的所有设施或活动均可用。"
+  ],
+  "attraction_type_values": [
+    "历史古迹",
+    "自然风光",
+    "博物馆与艺术",
+    "城市漫游与建筑",
+    "美食与市集",
+    "户外与运动",
+    "亲子与游乐",
+    "文化体验与演出",
+    "购物与夜生活",
+    "休闲与度假"
+  ],
+  "places": [
+    {
+      "id": "hk_museum_of_art",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "香港艺术馆",
+      "name_en": "Hong Kong Museum of Art",
+      "address": "九龙尖沙咀梳士巴利道10号",
+      "coordinates": {
+        "latitude": 22.293547222222,
+        "longitude": 114.172025
+      },
+      "opening_hours": {
+        "mon": ["10:00", "18:00"],
+        "tue": ["10:00", "18:00"],
+        "wed": ["10:00", "18:00"],
+        "thu": [],
+        "fri": ["10:00", "18:00"],
+        "sat": ["10:00", "21:00"],
+        "sun": ["10:00", "21:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [],
+      "sources": {
+        "venue": "https://hk.art.museum/tc/web/ma/visit/opening-hours-and-admission.html",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Museum_of_Art"
+      },
+      "types": [
+        "博物馆与艺术"
+      ]
+    },
+    {
+      "id": "hk_space_museum",
+      "admission": {
+        "price": 10,
+        "currency": "HKD"
+      },
+      "name_zh": "香港太空馆",
+      "name_en": "Hong Kong Space Museum",
+      "address": "九龙尖沙咀梳士巴利道10号",
+      "coordinates": {
+        "latitude": 22.294353,
+        "longitude": 114.171869
+      },
+      "opening_hours": {
+        "mon": ["13:00", "21:00"],
+        "tue": [],
+        "wed": ["13:00", "21:00"],
+        "thu": ["13:00", "21:00"],
+        "fri": ["13:00", "21:00"],
+        "sat": ["10:00", "21:00"],
+        "sun": ["10:00", "21:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "开放时间不代表天象厅的节目场次。"
+      ],
+      "sources": {
+        "venue": "https://hk.space.museum/en/web/spm/visit-and-facilities.html",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Space_Museum"
+      },
+      "types": [
+        "博物馆与艺术",
+        "亲子与游乐"
+      ]
+    },
+    {
+      "id": "hk_science_museum",
+      "admission": {
+        "price": 20,
+        "currency": "HKD"
+      },
+      "name_zh": "香港科学馆",
+      "name_en": "Hong Kong Science Museum",
+      "address": "九龙尖沙咀东部科学馆道2号",
+      "coordinates": {
+        "latitude": 22.301021,
+        "longitude": 114.17751
+      },
+      "opening_hours": {
+        "mon": ["10:00", "19:00"],
+        "tue": ["10:00", "19:00"],
+        "wed": ["10:00", "19:00"],
+        "thu": [],
+        "fri": ["10:00", "19:00"],
+        "sat": ["10:00", "21:00"],
+        "sun": ["10:00", "21:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "时段适用于展览厅。"
+      ],
+      "sources": {
+        "venue": "https://hk.science.museum/en/web/scm/visit.html",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Science_Museum"
+      },
+      "types": [
+        "博物馆与艺术",
+        "亲子与游乐"
+      ]
+    },
+    {
+      "id": "hk_museum_of_history",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "香港历史博物馆",
+      "name_en": "Hong Kong Museum of History",
+      "address": "九龙尖沙咀漆咸道南100号",
+      "coordinates": {
+        "latitude": 22.30159,
+        "longitude": 114.17711
+      },
+      "opening_hours": {
+        "mon": ["10:00", "18:00"],
+        "tue": [],
+        "wed": ["10:00", "18:00"],
+        "thu": ["10:00", "18:00"],
+        "fri": ["10:00", "18:00"],
+        "sat": ["10:00", "19:00"],
+        "sun": ["10:00", "19:00"]
+      },
+      "recommended_visit_duration": {
+        "minimum_minutes": 120,
+        "scope": "「香港故事」常设展览",
+        "source": "https://hk.history.museum/documents/publications/newsletter/HKMH_Newsletter_Apr-Jun2026.pdf"
+      },
+      "notes": [],
+      "sources": {
+        "venue": "https://hk.history.museum/sc/web/mh/plan-your-visit/admission.html",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Museum_of_History"
+      },
+      "types": [
+        "博物馆与艺术"
+      ]
+    },
+    {
+      "id": "kowloon_park",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "九龙公园",
+      "name_en": "Kowloon Park",
+      "address": "九龙尖沙咀柯士甸道22号",
+      "coordinates": {
+        "latitude": 22.30143,
+        "longitude": 114.16986
+      },
+      "opening_hours": {
+        "mon": ["05:00", "24:00"],
+        "tue": ["05:00", "24:00"],
+        "wed": ["05:00", "24:00"],
+        "thu": ["05:00", "24:00"],
+        "fri": ["05:00", "24:00"],
+        "sat": ["05:00", "24:00"],
+        "sun": ["05:00", "24:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "时段适用于公园整体；园内设施可能另有开放时间。"
+      ],
+      "sources": {
+        "venue": "https://www.lcsd.gov.hk/clpss/en/webApp/PhoneAddress.do",
+        "coordinates": "https://en.wikipedia.org/wiki/Kowloon_Park"
+      },
+      "types": [
+        "休闲与度假"
+      ]
+    },
+    {
+      "id": "avenue_of_stars",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "星光大道",
+      "name_en": "Avenue of Stars",
+      "address": "九龙尖沙咀海滨长廊",
+      "coordinates": {
+        "latitude": 22.29305,
+        "longitude": 114.17435
+      },
+      "opening_hours": {
+        "mon": ["00:00", "24:00"],
+        "tue": ["00:00", "24:00"],
+        "wed": ["00:00", "24:00"],
+        "thu": ["00:00", "24:00"],
+        "fri": ["00:00", "24:00"],
+        "sat": ["00:00", "24:00"],
+        "sun": ["00:00", "24:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "坐标取自项目中已有的政府 CSV。未用商铺营业时间代替长廊开放时间。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/eng/place-to-go/travel.guide-avenue-of-stars.html",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info"
+      },
+      "types": [
+        "自然风光",
+        "城市漫游与建筑"
+      ]
+    },
+    {
+      "id": "tsim_sha_tsui_clock_tower",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "前九广铁路钟楼",
+      "name_en": "Clock Tower",
+      "address": "九龙尖沙咀梳士巴利道10号，天星小轮码头旁",
+      "coordinates": {
+        "latitude": 22.29359,
+        "longitude": 114.16954
+      },
+      "opening_hours": {
+        "mon": ["00:00", "24:00"],
+        "tue": ["00:00", "24:00"],
+        "wed": ["00:00", "24:00"],
+        "thu": ["00:00", "24:00"],
+        "fri": ["00:00", "24:00"],
+        "sat": ["00:00", "24:00"],
+        "sun": ["00:00", "24:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "坐标取自项目中已有的政府 CSV。景点指钟楼外观；报时不代表开放时间。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/eng/place-to-go/travel.guide-clock-tower.html",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info"
+      },
+      "types": [
+        "历史古迹",
+        "城市漫游与建筑"
+      ]
+    },
+    {
+      "id": "m_plus",
+      "admission": {
+        "price": 190,
+        "currency": "HKD"
+      },
+      "name_zh": "M+ 博物馆",
+      "name_en": "M+",
+      "address": "九龙西九文化区博物馆道38号",
+      "coordinates": {
+        "latitude": 22.300958,
+        "longitude": 114.159645
+      },
+      "opening_hours": {
+        "mon": [],
+        "tue": ["10:00", "18:00"],
+        "wed": ["10:00", "18:00"],
+        "thu": ["10:00", "18:00"],
+        "fri": ["10:00", "22:00"],
+        "sat": ["10:00", "18:00"],
+        "sun": ["10:00", "18:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "最后入场为闭馆前30分钟。"
+      ],
+      "sources": {
+        "venue": "https://www.mplus.org.hk/en/plan-your-visit/",
+        "coordinates": "https://en.wikipedia.org/wiki/M%2B"
+      },
+      "types": [
+        "博物馆与艺术",
+        "城市漫游与建筑"
+      ]
+    },
+    {
+      "id": "hk_palace_museum",
+      "admission": {
+        "price": 70,
+        "currency": "HKD"
+      },
+      "name_zh": "香港故宫文化博物馆",
+      "name_en": "Hong Kong Palace Museum",
+      "address": "九龙西九文化区博物馆道8号",
+      "coordinates": {
+        "latitude": 22.3021,
+        "longitude": 114.1556
+      },
+      "opening_hours": {
+        "mon": ["10:00", "18:00"],
+        "tue": [],
+        "wed": ["10:00", "18:00"],
+        "thu": ["10:00", "18:00"],
+        "fri": ["10:00", "20:00"],
+        "sat": ["10:00", "20:00"],
+        "sun": ["10:00", "18:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [],
+      "sources": {
+        "venue": "https://www.hkpm.org.hk/en/visit/plan-your-visit",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Palace_Museum"
+      },
+      "types": [
+        "博物馆与艺术"
+      ]
+    },
+    {
+      "id": "west_kowloon_art_park",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "西九艺术公园",
+      "name_en": "Art Park",
+      "address": "九龙西九文化区艺术公园",
+      "coordinates": {
+        "latitude": 22.299798,
+        "longitude": 114.155792
+      },
+      "opening_hours": {
+        "mon": ["06:00", "23:00"],
+        "tue": ["06:00", "23:00"],
+        "wed": ["06:00", "23:00"],
+        "thu": ["06:00", "23:00"],
+        "fri": ["06:00", "23:00"],
+        "sat": ["06:00", "23:00"],
+        "sun": ["06:00", "23:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "未用早期临时海滨长廊或邻近码头的开放时间代替公园时段。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/eng/place-to-go/travel.guide-art-park.html",
+        "coordinates": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E4%B9%9D%E8%97%9D%E8%A1%93%E5%85%AC%E5%9C%92"
+      },
+      "types": [
+        "自然风光",
+        "博物馆与艺术",
+        "户外与运动",
+        "休闲与度假"
+      ]
+    },
+    {
+      "id": "tai_kwun",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "大馆",
+      "name_en": "Tai Kwun",
+      "address": "香港岛中环荷李活道10号",
+      "coordinates": {
+        "latitude": 22.2813,
+        "longitude": 114.154
+      },
+      "opening_hours": {
+        "mon": ["08:00", "23:00"],
+        "tue": ["08:00", "23:00"],
+        "wed": ["08:00", "23:00"],
+        "thu": ["08:00", "23:00"],
+        "fri": ["08:00", "23:00"],
+        "sat": ["08:00", "23:00"],
+        "sun": ["08:00", "23:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "适用于公共范围；展馆和个别活动另有安排。"
+      ],
+      "sources": {
+        "venue": "https://app.taikwun.hk/en/visit/visiting_information",
+        "coordinates": "https://en.wikipedia.org/wiki/Tai_Kwun"
+      },
+      "types": [
+        "历史古迹",
+        "博物馆与艺术",
+        "城市漫游与建筑",
+        "文化体验与演出"
+      ]
+    },
+    {
+      "id": "hong_kong_park",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "香港公园",
+      "name_en": "Hong Kong Park",
+      "address": "香港岛中环红棉路",
+      "coordinates": {
+        "latitude": 22.277208,
+        "longitude": 114.161744
+      },
+      "opening_hours": {
+        "mon": ["06:00", "23:00"],
+        "tue": ["06:00", "23:00"],
+        "wed": ["06:00", "23:00"],
+        "thu": ["06:00", "23:00"],
+        "fri": ["06:00", "23:00"],
+        "sat": ["06:00", "23:00"],
+        "sun": ["06:00", "23:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "时段和免费入场适用于户外公园。"
+      ],
+      "sources": {
+        "venue": "https://hkp.lcsd.gov.hk/en/visit",
+        "coordinates": "https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E5%85%AC%E5%9C%92"
+      },
+      "types": [
+        "自然风光",
+        "休闲与度假"
+      ]
+    },
+    {
+      "id": "hk_zoological_botanical_gardens",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "香港动植物公园",
+      "name_en": "Hong Kong Zoological and Botanical Gardens",
+      "address": "香港岛中环雅宾利道",
+      "coordinates": {
+        "latitude": 22.27778,
+        "longitude": 114.15639
+      },
+      "opening_hours": {
+        "mon": ["06:00", "19:00"],
+        "tue": ["06:00", "19:00"],
+        "wed": ["06:00", "19:00"],
+        "thu": ["06:00", "19:00"],
+        "fri": ["06:00", "19:00"],
+        "sat": ["06:00", "19:00"],
+        "sun": ["06:00", "19:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "时段适用于一般区域和哺乳类动物区；喷泉平台及温室另有时段。"
+      ],
+      "sources": {
+        "venue": "https://www.hkzbg.gov.hk/en/visitPage.html",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Zoological_and_Botanical_Gardens"
+      },
+      "types": [
+        "自然风光",
+        "亲子与游乐",
+        "休闲与度假"
+      ]
+    },
+    {
+      "id": "nan_lian_garden",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "南莲园池",
+      "name_en": "Nan Lian Garden",
+      "address": "九龙黄大仙钻石山凤德道60号",
+      "coordinates": {
+        "latitude": 22.339093,
+        "longitude": 114.204774
+      },
+      "opening_hours": {
+        "mon": ["07:00", "21:00"],
+        "tue": ["07:00", "21:00"],
+        "wed": ["07:00", "21:00"],
+        "thu": ["07:00", "21:00"],
+        "fri": ["07:00", "21:00"],
+        "sat": ["07:00", "21:00"],
+        "sun": ["07:00", "21:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "免费指园区入场。"
+      ],
+      "sources": {
+        "venue": "https://www.lcsd.gov.hk/en/parks/nlg/",
+        "coordinates": "https://en.wikipedia.org/wiki/Nan_Lian_Garden",
+        "admission": "https://www.news.gov.hk/isd/ebulletin/en/category/healthandcommunity/061110/html/061110en05010.htm"
+      },
+      "types": [
+        "自然风光",
+        "城市漫游与建筑",
+        "休闲与度假"
+      ]
+    },
+    {
+      "id": "golden_bauhinia_square",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "金紫荆广场",
+      "name_en": "Golden Bauhinia Square",
+      "address": "香港岛湾仔博览道1号",
+      "coordinates": {
+        "latitude": 22.28404,
+        "longitude": 114.17335
+      },
+      "opening_hours": {
+        "mon": ["00:00", "24:00"],
+        "tue": ["00:00", "24:00"],
+        "wed": ["00:00", "24:00"],
+        "thu": ["00:00", "24:00"],
+        "fri": ["00:00", "24:00"],
+        "sat": ["00:00", "24:00"],
+        "sun": ["00:00", "24:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "免费指广场；不含会展中心活动。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/eng/place-to-go/travel.guide-golden-bauhinia-square.html",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info",
+        "admission": "https://www.trip.com/travel-guide/attraction/hong-kong/golden-bauhinia-square-81945/"
+      },
+      "types": [
+        "城市漫游与建筑"
+      ]
+    },
+    {
+      "id": "temple_street_night_market",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "庙街夜市",
+      "name_en": "Temple Street Night Market",
+      "address": "九龙佐敦庙街",
+      "coordinates": {
+        "latitude": 22.30716,
+        "longitude": 114.17013
+      },
+      "opening_hours": {
+        "mon": ["14:00", "23:00"],
+        "tue": ["14:00", "23:00"],
+        "wed": ["14:00", "23:00"],
+        "thu": ["14:00", "23:00"],
+        "fri": ["14:00", "23:00"],
+        "sat": ["14:00", "23:00"],
+        "sun": ["14:00", "23:00"]
+      },
+      "recommended_visit_duration": {
+        "minimum_minutes": 60,
+        "scope": "庙街夜市（携程建议范围为 60–180 分钟，仅供参考）",
+        "source": "https://www.trip.com/travel-guide/attraction/hong-kong/temple-street-night-market-20905878/"
+      },
+      "notes": [
+        "摊位营业时间各异。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/eng/place-to-go/travel.guide-temple-street-night-market.html",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info",
+        "admission": "https://www.trip.com/travel-guide/attraction/hong-kong/temple-street-night-market-20905878/"
+      },
+      "types": [
+        "美食与市集",
+        "购物与夜生活"
+      ]
+    },
+    {
+      "id": "ladies_market",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "女人街",
+      "name_en": "Ladies' Market",
+      "address": "九龙旺角通菜街",
+      "coordinates": {
+        "latitude": 22.31812,
+        "longitude": 114.17082
+      },
+      "opening_hours": {
+        "mon": ["11:00", "23:30"],
+        "tue": ["11:00", "23:30"],
+        "wed": ["11:00", "23:30"],
+        "thu": ["11:00", "23:30"],
+        "fri": ["11:00", "23:30"],
+        "sat": ["11:00", "23:30"],
+        "sun": ["11:00", "23:30"]
+      },
+      "recommended_visit_duration": {
+        "minimum_minutes": 60,
+        "scope": "女人街（携程建议范围为 60–180 分钟，仅供参考）",
+        "source": "https://www.trip.com/travel-guide/attraction/hong-kong/ladies-market-136007532"
+      },
+      "notes": [
+        "摊位营业时间各异。"
+      ],
+      "sources": {
+        "venue": "https://www.discoverhongkong.com/tc/place-to-go/travel.guide-ladies-market.html",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info",
+        "admission": "https://www.trip.com/travel-guide/attraction/hong-kong/ladies-market-136007532"
+      },
+      "types": [
+        "美食与市集",
+        "购物与夜生活"
+      ]
+    },
+    {
+      "id": "sky_terrace_428",
+      "admission": {
+        "price": 0,
+        "currency": "HKD"
+      },
+      "name_zh": "凌霄阁摩天台428",
+      "name_en": "Sky Terrace 428",
+      "address": "香港岛太平山顶凌霄阁",
+      "coordinates": {
+        "latitude": 22.271525,
+        "longitude": 114.1498472
+      },
+      "opening_hours": {
+        "mon": ["08:30", "22:00"],
+        "tue": ["08:30", "22:00"],
+        "wed": ["08:30", "22:00"],
+        "thu": ["08:30", "22:00"],
+        "fri": ["08:30", "22:00"],
+        "sat": ["08:30", "22:00"],
+        "sun": ["08:30", "22:00"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "未核实当前观景台单次入场价；坐标为凌霄阁。"
+      ],
+      "sources": {
+        "venue": "https://www.thepeak.com.hk/en/the-peak-experience/the-sky-terrace-428",
+        "coordinates": "https://en.wikipedia.org/wiki/Peak_Tower"
+      },
+      "types": [
+        "城市漫游与建筑"
+      ]
+    },
+    {
+      "id": "hong_kong_disneyland",
+      "admission": {
+        "price": null,
+        "currency": "HKD"
+      },
+      "name_zh": "香港迪士尼乐园",
+      "name_en": "Hong Kong Disneyland",
+      "address": "新界大屿山竹篙湾香港迪士尼乐园度假区",
+      "coordinates": {
+        "latitude": 22.31333,
+        "longitude": 114.04333
+      },
+      "opening_hours": {
+        "mon": null,
+        "tue": null,
+        "wed": null,
+        "thu": null,
+        "fri": null,
+        "sat": null,
+        "sun": null
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "门票分档422RMB起，票价和开放时间均需按游览日期查询。"
+      ],
+      "sources": {
+        "venue": "https://www.hongkongdisneyland.com/new-day-calendar/",
+        "coordinates": "https://en.wikipedia.org/wiki/Hong_Kong_Disneyland"
+      },
+      "types": [
+        "亲子与游乐",
+        "文化体验与演出"
+      ]
+    },
+    {
+      "id": "ocean_park_hong_kong",
+      "admission": {
+        "price": 538,
+        "currency": "HKD"
+      },
+      "name_zh": "香港海洋公园",
+      "name_en": "Ocean Park Hong Kong",
+      "address": "香港岛黄竹坑",
+      "coordinates": {
+        "latitude": 22.24707,
+        "longitude": 114.1746
+      },
+      "opening_hours": {
+        "mon": ["10:00", "18:30"],
+        "tue": ["10:00", "18:30"],
+        "wed": ["10:00", "18:30"],
+        "thu": ["10:00", "18:30"],
+        "fri": ["10:00", "18:30"],
+        "sat": ["10:00", "18:30"],
+        "sun": ["10:00", "18:30"]
+      },
+      "recommended_visit_duration": null,
+      "notes": [
+        "票价为成人普通门票；开放时间按园方日历查询。"
+      ],
+      "sources": {
+        "venue": "https://oceanpark.com.hk/en/park-information",
+        "coordinates": "https://data.gov.hk/sc-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info",
+        "admission": "https://www.oceanpark.cn/en/faq"
+      },
+      "types": [
+        "亲子与游乐"
+      ]
+    }
+  ]
+}
